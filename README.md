@@ -28,8 +28,9 @@ Note that for integration with PerWorldInventory, `load-data-on-join` needs to b
 - `invseeplusplus.endersee.edit` allows the player to manipulate the target player's enderchest. By default only for server operators.
 - `invseeplusplus.exempt.invsee` makes it impossible to spectate the inventory of the owner of this permission.
 - `invseeplusplus.exempt.endersee` makes it impossible to spectate the enderchest of the owner of this permission.
-- `invseeplusplus.bypass-exempt.invsee` ignore whether target players are exempted from having their inventory spectated
-- `invseeplusplus.bypass-exempt.endersee` ignore whether target players are exempted from having their enderchest spectated
+- `invseeplusplus.bypass-exempt.invsee` ignore whether target players are exempted from having their inventory spectated.
+- `invseeplusplus.bypass-exempt.endersee` ignore whether target players are exempted from having their enderchest spectated.
+- `invseeplusplus.tabcomplete` allows username tabcompletion in /invsee or /endersee commands. This permission is automatically provided by `invseeplusplus.invsee.view` and `invseeplusplus.endersee.view`.  
 
 ###### Aggregate permissions:
 - `invseeplusplus.view` provides `invseeplusplus.invsee.view` and `invseeplusplus.endersee.view`.
@@ -93,6 +94,7 @@ Anything else can be discussed via the [discussion thread on SpigotMC](https://w
     - `java -jar BuildTools.jar --rev 1.21.1 --compile craftbukkit --remapped`
     - `java -jar BuildTools.jar --rev 1.21.3 --compile craftbukkit --remapped`
     - `java -jar BuildTools.jar --rev 1.21.4 --compile craftbukkit --remapped`
+    - `java -jar BuildTools.jar --rev 1.21.5 --compile craftbukkit --remapped`
 2. In the root directory of this project run `mvn clean package`.
 You can find the plugin jar at InvSee++_plugin/target/InvSee++.jar.
 
@@ -115,15 +117,15 @@ There are two types of support, Tier 1 support and Tier 2 support.
 In general I support the latest patch release of popularly used Minecraft version, as well as multiple recent versions of the latest major release.
 
 Server support matrix:
-| Server Software            | 1.8.8  | 1.12.2 | 1.16.5  | 1.17.1 | 1.18.2 | 1.19.4  | 1.20.1 | 1.20.4 | 1.20.6  | 1.21.1  | 1.21.3  | 1.21.4  |
-|----------------------------|--------|--------|---------|--------|--------|---------|--------|--------|---------|---------|---------|---------|
-| CraftBukkit                | Tier 2 | Tier 2 | Tier 2  | Tier 2 | Tier 2 | Tier 2  | Tier 2 | Tier 2 | Tier 2  | Tier 2  | Tier 2  | Tier 1  |
-| Paper                      | Tier 2 | Tier 2 | Tier 2  | Tier 2 | Tier 2 | Tier 2  | Tier 2 | Tier 2 | Tier 2  | Tier 2  | Tier 2  | Tier 2  |
-| Folia                      | n/a    | n/a    | n/a     | n/a    | n/a    | planned | -      | -      | planned | -       | -       | planned |
-| Other forks of CraftBukkit | Tier 2 | Tier 2 | Tier 2  | Tier 2 | Tier 2 | Tier 2  | Tier 2 | Tier 2 | Tier 2  | Tier 2  | Tier 2  | Tier 2  |
-| (Neo)Forge/Bukkit hybrids  | Tier 2 | Tier 2 | Tier 2* | Tier 2 | Tier 2 | Tier 2  | Tier 2 | Tier 2 | Tier 2  | Tier 2  | Tier 2  | Tier 2  |
-| Fabric/Bukkit hybrids      | Tier 2 | Tier 2 | Tier 2* | Tier 2 | Tier 2 | Tier 2  | Tier 2 | Tier 2 | Tier 2  | Tier 2  | Tier 2  | Tier 2  |
-| Glowstone                  | Tier 2 | Tier 2 | n/a     | n/a    | n/a    | n/a     | n/a    | n/a    | n/a     | n/a     | n/a     | n/a     |
+| Server Software            | 1.8.8  | 1.12.2 | 1.16.5  | 1.17.1 | 1.18.2 | 1.19.4  | 1.20.1 | 1.20.4 | 1.20.6  | 1.21.1  | 1.21.3  | 1.21.4  | 1.21.5  |
+|----------------------------|--------|--------|---------|--------|--------|---------|--------|--------|---------|---------|---------|---------|---------|
+| CraftBukkit                | Tier 2 | Tier 2 | Tier 2  | Tier 2 | Tier 2 | Tier 2  | Tier 2 | Tier 2 | Tier 2  | Tier 2  | Tier 2  | Tier 2  | Tier 1  |
+| Paper                      | Tier 2 | Tier 2 | Tier 2  | Tier 2 | Tier 2 | Tier 2  | Tier 2 | Tier 2 | Tier 2  | Tier 2  | Tier 2  | Tier 2  | Tier 2  |
+| Folia                      | n/a    | n/a    | n/a     | n/a    | n/a    | planned | -      | -      | planned | -       | -       | -       | planned |
+| Other forks of CraftBukkit | Tier 2 | Tier 2 | Tier 2  | Tier 2 | Tier 2 | Tier 2  | Tier 2 | Tier 2 | Tier 2  | Tier 2  | Tier 2  | Tier 2  | Tier 2  |
+| (Neo)Forge/Bukkit hybrids  | Tier 2 | Tier 2 | Tier 2* | Tier 2 | Tier 2 | Tier 2  | Tier 2 | Tier 2 | Tier 2  | Tier 2  | Tier 2  | Tier 2  | Tier 2  |
+| Fabric/Bukkit hybrids      | Tier 2 | Tier 2 | Tier 2* | Tier 2 | Tier 2 | Tier 2  | Tier 2 | Tier 2 | Tier 2  | Tier 2  | Tier 2  | Tier 2  | Tier 2  |
+| Glowstone                  | Tier 2 | Tier 2 | n/a     | n/a    | n/a    | n/a     | n/a    | n/a    | n/a     | n/a     | n/a     | n/a     | n/a     |
 
 *The modding frameworks that these servers are based on were released at a time when Minecraft's minimum supported version was Java 8 (or lower),
 and there is a good chance they won't be able to load mods and plugins compiled for newer Java versions.
