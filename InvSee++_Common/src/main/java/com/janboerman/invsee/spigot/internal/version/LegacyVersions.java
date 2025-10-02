@@ -3,7 +3,7 @@ package com.janboerman.invsee.spigot.internal.version;
 import java.util.HashMap;
 import java.util.Map;
 
-public class LegacyVersions {
+public final class LegacyVersions {
 
     private static final LegacyVersions INSTANCE = new LegacyVersions();
 
@@ -30,7 +30,12 @@ public class LegacyVersions {
             LATEST_THAT_SUPPORTS_1_18 = INSTANCE.register(MinecraftVersion._1_18, "0.11.10", "https://www.spigotmc.org/resources/invsee.82342/download?version=455217", null),
             LATEST_THAT_SUPPORTS_1_17 = INSTANCE.register(MinecraftVersion._1_17, "0.11.4", "https://www.spigotmc.org/resources/invsee.82342/download?version=435036", null),
             LATEST_THAT_SUPPORTS_1_16_3 = INSTANCE.register(MinecraftVersion._1_16_3, "0.7", "https://www.spigotmc.org/resources/invsee.82342/download?version=365265", null),
-            LATEST_THAT_SUPPORTS_1_15_2 = LATEST_THAT_SUPPORTS_1_20_5;
+            LATEST_THAT_SUPPORTS_1_15_2 = LATEST_THAT_SUPPORTS_1_20_5,
+            LATEST_THAT_SUPPORTS_1_21_3 = INSTANCE.register(new MinecraftVersion[] { MinecraftVersion._1_21_3, MinecraftVersion._1_21_6 }, "0.30.10",
+                    "https://www.spigotmc.org/resources/invsee.82342/download?version=609062",
+                    "https://github.com/Jannyboy11/InvSee-plus-plus/releases/tag/v0.30.10"),
+            LATEST_THAT_SUPPORTS_1_21_6 = LATEST_THAT_SUPPORTS_1_21_3
+            ;
 
     private final Map<MinecraftVersion, LegacyVersion> legacyInvSeePlusPlusVersions = new HashMap<>();
 

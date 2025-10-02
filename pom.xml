@@ -3,7 +3,7 @@
 
     <groupId>com.janboerman.invsee</groupId>
     <artifactId>invsee-plus-plus</artifactId>
-    <version>0.29.24-SNAPSHOT</version>
+    <version>0.30.11-SNAPSHOT</version>
 
     <modules>
         <module>Utils</module>
@@ -20,9 +20,10 @@
         <module>InvSee++_Platforms/Impl_1_20_6_R4</module>
         <module>InvSee++_Platforms/Impl_1_21_R1</module>
         <module>InvSee++_Platforms/Impl_1_21_1_R1</module>
-        <module>InvSee++_Platforms/Impl_1_21_3_R2</module>
         <module>InvSee++_Platforms/Impl_1_21_4_R3</module>
         <module>InvSee++_Platforms/Impl_1_21_5_R4</module>
+        <module>InvSee++_Platforms/Impl_1_21_7_R5</module>
+        <module>InvSee++_Platforms/Impl_1_21_9_R6</module>
         <module>InvSee++_Platforms/Impl_Glowstone</module>
         <module>InvSee++_MultiverseInventories</module> <!-- TODO finish this module -->
         <module>InvSee++_PerWorldInventory</module>
@@ -39,12 +40,14 @@
         <module>InvSee++_Give_Platforms/Give_Impl_1_20_6_R4</module>
         <module>InvSee++_Give_Platforms/Give_Impl_1_21_R1</module>
         <module>InvSee++_Give_Platforms/Give_Impl_1_21_1_R1</module>
-        <module>InvSee++_Give_Platforms/Give_Impl_1_21_3_R2</module>
         <module>InvSee++_Give_Platforms/Give_Impl_1_21_4_R3</module>
         <module>InvSee++_Give_Platforms/Give_Impl_1_21_5_R4</module>
+        <module>InvSee++_Give_Platforms/Give_Impl_1_21_7_R5</module>
+        <module>InvSee++_Give_Platforms/Give_Impl_1_21_9_R6</module>
         <module>InvSee++_Give_Platforms/Give_Impl_Glowstone</module>
         <module>InvSee++_Give_Plugin</module>
         <module>InvSee++_Clear_Plugin</module>
+        <module>InvSee++_Clone_Plugin</module>
     </modules>
     <packaging>pom</packaging>
 
